@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <!-- Icones -->
+</head>
+<body>
+    <header class="menu">
+        <ul>
+            <li><a href="{% url 'plataforma.home' %}">Home</a></li>
+            <li><a href="{% url 'plataforma.autenticacao' %}">Autenticação</a></li>
+            <li><a href="{% url 'plataforma.sobre' %}">Sobre</a></li>
+        </ul>
+    </header>
+    <main class="contanier">
+        <div class="content">
+            <section>
+                <h2>Cursos</h2>
+                <ul>
+                    <li class="curso">
+                        IMG | 
+                        Engenharia Mecânica
+                        <!-- <i class="fa-solid fa-arrow-right-long-to-line"></i> -->
+                        <span><img src="{% static 'img/arrow.svg' %}" alt="entrar-no-curso" width="15"></span>
+                    </li>
+                    <li class="curso">
+                        IMG | Engenharia da Compuatação
+                        <span><img src="{% static 'img/arrow.svg' %}" alt="entrar-no-curso" width="15"></span>
+                    </li>
+                </ul>
+            </section>
+            <aside>
+                <h2>Melhores Notas</h2>
+                <div class="aluno">
+                    ALUNO1
+                </div>
+                <div class="aluno">
+                    ALUNO2
+                </div>
+            </aside>
+        </div>
+        <!-- {% block content %}{% endblock %} -->
+    </main>
+    <footer>
+        &copy;LukeMN - DATA ATUAL
+    </footer>
+</body>
+</html>
