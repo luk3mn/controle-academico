@@ -1,3 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-shadow: none;
+    border: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html {
+    --bg-primary: rgb(230, 230, 230);
+    --bg-secondary: rgb(224, 119, 119);
+    --block: rgb(122, 111, 111);
+    --title: rgb(54, 54, 54);
+}
+
 body {
-    background-color: blanchedalmond;
+    background-color: var(--bg-primary);
+}
+
+h1, h2, h3, h4 {
+    color: var(--title);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid rgb(0, 0, 0);
+    height: 100vh;
+}
+
+/* === CABEÇALHO === */
+.container header {
+    flex-grow: 0;
+}
+
+.container header .menu {
+    background-color: var(--bg-secondary);
+}
+
+.container header .menu ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container header .menu ul li {
+    display: inline-block;
+    margin: .5em 1.5em;
+}
+
+.container header .menu ul li a {
+    color: var(--bg-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* === PRINCIPAL === */
+.container main {
+    flex-grow: 1;
+}
+
+.container main .content {
+    display: flex;
+    flex-direction: column;
+    /* border: 3px solid red; */
+    height: 100%;
+}
+
+.container main .content .block-cursos,
+.container main .content .block-notas {
+    margin: .3rem;
+    padding: .5rem;
+}
+
+.container main .content .block-cursos {
+    flex-grow: 1;
+}
+
+scroll-container {
+    display: block;
+    height: 550px;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.container main .content .block-notas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 0;
+
+    border: 3px solid var(--block);
+    border-radius: 1rem;
+}
+
+.container main .content .block-cursos ul li {
+    background-color: var(--block);
+    color: var(--bg-primary);
+    padding: 1rem;
+    margin: .5rem;
+    border-radius: 1rem;
+    list-style: none;
+}
+
+/* === RODAPÉ === */
+.container footer {
+    flex-grow: 0;
+
+    background-color: var(--bg-secondary);
+    color: var(--bg-primary);
+    font-weight: 600;
+    font-size: .9rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 770px) {
+    .container header .menu .open-menu {
+        display: none;    
+    }
+
+    .container main .content {
+        display: flex;
+        flex-direction: row;
+        /* border: 3px solid red; */
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .container header .menu .open-menu {
+        margin: .6rem;
+    }
+
+    .container header .menu .menu-modal {
+        background-color: rgb(0, 0, 0, 0.8);
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        left: 0;
+    }
+    
+    .container header .menu .menu-modal ul {
+        display: flex;
+        flex-direction: column;
+    
+        background-color: var(--bg-secondary);
+        border-radius: 1rem;
+        margin: 10% 100px;
+        height: 400px;
+    }
+    
+    .container header .menu .menu-modal .icon-close {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .container header .menu .menu-modal .icon-close span {
+        background: url('../img/close.svg') no-repeat;
+        width: 2rem;
+        height: 2rem;
+        margin: 1.5rem;
+    }
+
+    .hidden {
+        display: none;
+    }
 }

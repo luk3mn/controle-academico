@@ -13,44 +13,31 @@
     <!-- Icones -->
 </head>
 <body>
-    <header class="menu">
-        <ul>
-            <li><a href="{% url 'plataforma.home' %}">Home</a></li>
-            <li><a href="{% url 'plataforma.autenticacao' %}">Autenticação</a></li>
-            <li><a href="{% url 'plataforma.sobre' %}">Sobre</a></li>
-        </ul>
-    </header>
-    <main class="contanier">
-        <div class="content">
-            <section>
-                <h2>Cursos</h2>
-                <ul>
-                    <li class="curso">
-                        IMG | 
-                        Engenharia Mecânica
-                        <!-- <i class="fa-solid fa-arrow-right-long-to-line"></i> -->
-                        <span><img src="{% static 'img/arrow.svg' %}" alt="entrar-no-curso" width="15"></span>
-                    </li>
-                    <li class="curso">
-                        IMG | Engenharia da Compuatação
-                        <span><img src="{% static 'img/arrow.svg' %}" alt="entrar-no-curso" width="15"></span>
-                    </li>
-                </ul>
-            </section>
-            <aside>
-                <h2>Melhores Notas</h2>
-                <div class="aluno">
-                    ALUNO1
+    <div class="container">
+        <header>
+            <div class="menu">
+                <img src="{% static 'img/menu.svg' %}" alt="" class="open-menu">
+                <div class="menu-modal hidden">
+                    <div class="icon-close">
+                        <span id="close-menu"></span>
+                    </div>
+                    <ul>
+                        <li><a href="{% url 'plataforma.home' %}">Home</a></li>
+                        <li><a href="{% url 'plataforma.autenticacao' %}">Autenticação</a></li>
+                        <li><a href="{% url 'plataforma.sobre' %}">Sobre</a></li>
+                    </ul>
                 </div>
-                <div class="aluno">
-                    ALUNO2
-                </div>
-            </aside>
-        </div>
-        <!-- {% block content %}{% endblock %} -->
-    </main>
-    <footer>
-        &copy;LukeMN - DATA ATUAL
-    </footer>
+            </div>
+        </header>
+        <main>
+            
+            {% block content %}{% endblock %}
+        </main>
+        <footer>
+            &copy;LukeMN - DATA ATUAL
+        </footer>
+    </div>
+
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

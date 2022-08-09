@@ -1,9 +1,53 @@
 {% extends 'plataforma/base.html' %}
 
+
+{% load static %}
+
 {% block title %}
     Página Inicial
 {% endblock %}
 
 {% block content %}
-    <h2>Página Inicial</h2>
+<div class="content">
+    <section class="block-cursos">
+        <h2>Cursos</h2>
+        <scroll-container>
+            <ul>
+                <li class="curso">
+                    IMG | 
+                    Engenharia Mecânica
+                    <!-- <i class="fa-solid fa-arrow-right-long-to-line"></i> -->
+                    <span><img src="{% static 'img/arrow.svg' %}" alt="entrar-no-curso" width="15"></span>
+                </li>
+                <li class="curso">
+                    IMG | Engenharia da Compuatação
+                    <span><img src="{% static 'img/arrow.svg' %}" alt="entrar-no-curso" width="15"></span>
+                </li>
+                <li class="curso">
+                    IMG | Análise e Desenvolvimento de Sistemas
+                    <span><img src="{% static 'img/arrow.svg' %}" alt="entrar-no-curso" width="15"></span>
+                </li>
+                
+            </ul>
+        </scroll-container>
+    </section>
+    <aside class="block-notas">
+        <h2>Melhores Notas</h2>
+        <div class="aluno">
+            ALUNO1
+        </div>
+        <div class="aluno">
+            ALUNO2
+        </div>
+        <div class="aluno">
+            ALUNO3
+        </div>
+        <div class="aluno">
+            ALUNO4
+        </div>
+        <div class="aluno">
+            ALUNO5
+        </div>
+    </aside>
+</div>
 {% endblock %}
