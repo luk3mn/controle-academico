@@ -16,9 +16,8 @@
                 {% for curso in cursos %}
                 <li class="curso">
                     {{ curso.descricao }}
-                    <!-- <i class="fa-solid fa-arrow-right-long-to-line"></i> -->
-                    <a href="#">
-                        <span><img src="{% static 'img/arrow.svg' %}" alt="entrar-no-curso" width="15"></span>
+                    <a href="{% url 'plataforma.curso' curso.id %}" class="icones">
+                        <i class="fa-solid fa-right-to-bracket"></i>
                     </a>
                 </li>
                 {% endfor %}

@@ -17,6 +17,8 @@ html {
 
 body {
     background-color: var(--bg-primary);
+    /* border: 3px solid rgb(255, 0, 0); */
+    height: 100vh;
 }
 
 h1, h2, h3, h4 {
@@ -28,8 +30,8 @@ h1, h2, h3, h4 {
     display: flex;
     flex-direction: column;
 
-    border: 1px solid rgb(0, 0, 0);
-    height: 100vh;
+    /* border: 3px solid rgb(0, 0, 0); */
+    height: 100%;
 }
 
 /* === CABEÇALHO === */
@@ -82,9 +84,10 @@ h1, h2, h3, h4 {
 
 scroll-container {
     display: block;
-    height: 550px;
+    height: 515px;
     overflow-y: auto;
     scroll-behavior: smooth;
+    /* border: 3px dashed red; */
 }
 
 .container main .content .block-notas {
@@ -106,6 +109,16 @@ scroll-container {
     list-style: none;
 }
 
+.container main .content .grade-curricular, .grade-curricular a {
+    background-color: var(--bg-secondary);
+    color: var(--title);
+    text-align: center;
+    font-size: larger;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 1rem 0;
+}
+
 /* === RODAPÉ === */
 .container footer {
     flex-grow: 0;
@@ -117,7 +130,12 @@ scroll-container {
     text-align: center;
 }
 
-@media screen and (min-width: 770px) {
+.icones {
+    font-size: 2rem;
+    color: var(--bg-secondary);
+}
+
+@media screen and (min-width: 980px) {
     .container header .menu .open-menu {
         display: none;    
     }
@@ -128,9 +146,17 @@ scroll-container {
         /* border: 3px solid red; */
         height: 100%;
     }
+
+    .container main .content .block-notas {
+        width: 300px;
+    }
+
+    .container main .content .grade-curricular {
+
+    }
 }
 
-@media screen and (max-width: 770px) {
+@media screen and (max-width: 980px) {
     .container header .menu .open-menu {
         margin: .6rem;
     }

@@ -1,0 +1,28 @@
+{% extends 'plataforma/base.html' %}
+
+{% block content %}
+<div class="content">
+    
+    <section class="block-cursos">
+        <a href="{% url 'plataforma.home' %}" class="icones">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <h2>{{ curso }}</h2>
+        <div>
+            <ul>
+                <li>Criado em: {{ curso.data_criacao }}</li>
+                <li>Professor: </li>
+                <li>Alunos</li>
+            </ul>    
+        </div>
+    </section>
+    <section class="grade-curricular">
+        <a href="{% url 'plataforma.disciplinas' %}">Grade Curricular</a>
+    </section>
+
+    <aside class="block-notas">
+        <h2>Sobre o curso</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor debitis dicta itaque facilis saepe fugit! Possimus, earum incidunt nobis reprehenderit error nostrum officiis iusto nemo sapiente corrupti repudiandae similique in?</p>
+    </aside>
+</div>
+{% endblock %}
