@@ -23,15 +23,19 @@
                         <span id="close-menu"></span>
                     </div>
                     <ul>
-                        <li><a href="{% url 'plataforma.home' %}">Home</a></li>
-                        <li><a href="{% url 'plataforma.autenticacao' %}">Autenticação</a></li>
-                        <li><a href="{% url 'plataforma.sobre' %}">Sobre</a></li>
+                        <span>
+                            <li><a href="{% url 'plataforma.home' %}">Home</a></li>
+                            <li><a href="">Disciplinas</a></li>
+                            <li><a href="{% url 'plataforma.sobre' %}">Sobre</a></li>
+                        </span>
+                        <li><a href="{% url 'plataforma.autenticacao' %}">
+                            <i class="fa-solid fa-user"></i>
+                        </a></li>
                     </ul>
                 </div>
             </div>
         </header>
         <main>
-            
             {% block content %}{% endblock %}
         </main>
         <footer>

@@ -12,12 +12,16 @@
             <ul>
                 <li>Criado em: {{ curso.data_criacao }}</li>
                 <li>Professor: </li>
-                <li>Alunos</li>
+                <a href="{% url 'plataforma.alunos' %}" class="lista-alunos">
+                    <li>Alunos
+                        <i class="fa-solid fa-person-walking-arrow-right"></i>
+                    </li>
+                </a>
             </ul>    
         </div>
     </section>
     <section class="grade-curricular">
-        <a href="{% url 'plataforma.disciplinas' %}">Grade Curricular</a>
+        <a href="{% url 'plataforma.disciplinas' curso.id %}">Grade Curricular</a>
     </section>
 
     <aside class="block-notas">

@@ -10,7 +10,9 @@
         <h2>Grade Curricular</h2>
         <div>
             <ul>
-                <li></li>
+                {% for disciplina in disciplinas %}
+                <li>{{ disciplina }}</li>
+                {% endfor %}
             </ul>    
         </div>
     </section>

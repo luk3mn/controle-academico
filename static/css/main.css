@@ -101,12 +101,20 @@ scroll-container {
 }
 
 .container main .content .block-cursos ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     background-color: var(--block);
     color: var(--bg-primary);
-    padding: 1rem;
+    padding: 1rem 2rem;
     margin: .5rem;
     border-radius: 1rem;
     list-style: none;
+}
+
+.container main .content .block-cursos ul li i {
+    font-size: 1.5rem;
 }
 
 .container main .content .grade-curricular, .grade-curricular a {
@@ -124,7 +132,7 @@ scroll-container {
     flex-grow: 0;
 
     background-color: var(--bg-secondary);
-    color: var(--bg-primary);
+    color: var(--title);
     font-weight: 600;
     font-size: .9rem;
     text-align: center;
@@ -135,9 +143,25 @@ scroll-container {
     color: var(--bg-secondary);
 }
 
+.lista-alunos li {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.info-alunos {
+    display: flex;
+    flex-direction: column;
+}
+
 @media screen and (min-width: 980px) {
     .container header .menu .open-menu {
         display: none;    
+    }
+
+    .container header .menu .menu-modal ul {
+        display: flex;
+        justify-content: space-between;
     }
 
     .container main .content {
@@ -152,7 +176,9 @@ scroll-container {
     }
 
     .container main .content .grade-curricular {
-
+        position: absolute;
+        margin: 1% 32%;
+        padding: .1rem .8rem;
     }
 }
 
@@ -170,7 +196,7 @@ scroll-container {
         left: 0;
     }
     
-    .container header .menu .menu-modal ul {
+    .container header .menu .menu-modal ul{
         display: flex;
         flex-direction: column;
     
@@ -178,6 +204,12 @@ scroll-container {
         border-radius: 1rem;
         margin: 10% 100px;
         height: 400px;
+    }
+
+    .container header .menu .menu-modal ul span {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
     
     .container header .menu .menu-modal .icon-close {
